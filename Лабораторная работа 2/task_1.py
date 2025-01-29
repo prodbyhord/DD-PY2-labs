@@ -1,4 +1,7 @@
 class Book:
+    """
+    Класс, представляющий книгу.
+    """
     def __init__(self, id_, name, pages):
         self.id = id_
         self.name = name
@@ -9,7 +12,6 @@ class Book:
 
     def __repr__(self):
         return f"Book(id_={self.id}, name='{self.name}', pages={self.pages})"
-
 
 BOOKS_DATABASE = [
     {
