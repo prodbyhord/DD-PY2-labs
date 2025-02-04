@@ -3,15 +3,29 @@ class Book:
     Класс, представляющий книгу.
     """
     def __init__(self, id_, name, pages):
+        """
+        Инициализация объекта "Книга".
+
+        :param id_: Уникальный идентификатор книги
+        :param name: Название книги
+        :param pages: Количество страниц в книге
+        """
         self.id = id_
         self.name = name
         self.pages = pages
 
     def __str__(self):
+        """
+        Возвращает строковое представление книги.
+        """
         return f'\u041a\u043d\u0438\u0433\u0430 \"{self.name}\"'
 
     def __repr__(self):
+        """
+        Возвращает строку, создающую экземпляр книги.
+        """
         return f"Book(id_={self.id}, name='{self.name}', pages={self.pages})"
+
 
 BOOKS_DATABASE = [
     {
