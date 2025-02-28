@@ -15,15 +15,9 @@ class Book:
         self.pages = pages
 
     def __str__(self):
-        """
-        Возвращает строковое представление книги.
-        """
         return f'\u041a\u043d\u0438\u0433\u0430 \"{self.name}\"'
 
     def __repr__(self):
-        """
-        Возвращает строку, создающую экземпляр книги.
-        """
         return f"Book(id_={self.id}, name='{self.name}', pages={self.pages})"
 
 class Library:
@@ -39,9 +33,6 @@ class Library:
         self.books = books if books is not None else []
 
     def get_next_book_id(self):
-        """
-        Возвращает следующий доступный идентификатор книги.
-        """
         if not self.books:
             return 1
         return max(book.id for book in self.books) + 1
